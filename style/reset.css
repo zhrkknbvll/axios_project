@@ -13,4 +13,5 @@ a{
 }
 body {
     overflow-x: hidden;
+      background: linear-gradient(135deg, #1e1b4b 0%, #581c87 50%, #1e1b4b 100%);
 }
