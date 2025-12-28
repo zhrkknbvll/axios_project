@@ -1,0 +1,425 @@
+  .header {
+            background: #1a1a2e;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+            -webkit-text-fill-color: transparent;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+        }
+
+        .nav-link {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        .nav-link:hover {
+            color: #fff;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 10px 25px;
+            border-radius: 25px;
+            border: none;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-explore {
+            background: linear-gradient(135deg, #7c3aed, #a855f7);
+            color: #fff;
+        }
+
+        .btn-explore:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(168, 85, 247, 0.4);
+        }
+
+        .btn-create {
+            background: transparent;
+            color: #fff;
+            border: 2px solid rgba(255,255,255,0.2);
+        }
+
+        .btn-create:hover {
+            border-color: #a855f7;
+            background: rgba(168, 85, 247, 0.1);
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 60px 40px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .section-header h2 {
+            font-size: 32px;
+            font-weight: 700;
+        }
+
+        .explore-btn {
+            font-size: 14px;
+            color: #c084fc;
+            text-decoration: none;
+            transition: color .3s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .explore-btn:hover {
+            color: #fff;
+        }
+
+        .auctions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .auction-card {
+            border-radius: 20px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform .3s ease, box-shadow .3s ease;
+            will-change: transform;
+        }
+
+        .auction-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(168, 85, 247, .5);
+        }
+
+        .card-1 { background: linear-gradient(135deg, #818cf8, #a855f7); }
+        .card-2 { background: linear-gradient(135deg, #6ee7b7, #2dd4bf); }
+        .card-3 { background: linear-gradient(135deg, #67e8f9, #60a5fa); }
+        .card-4 { background: linear-gradient(135deg, #fbbf24, #f97316); }
+
+        .card-image {
+            position: relative;
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .card-image .emoji {
+            font-size: 140px;
+            transition: transform .5s ease;
+        }
+
+        .auction-card:hover .card-image .emoji {
+            transform: scale(1.15) rotate(8deg);
+        }
+
+        .live-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 16px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #fff;
+            background: #ef4444;
+            border-radius: 20px;
+            animation: pulse 2s infinite;
+        }
+
+        .live-badge::before {
+            content: "";
+            width: 8px;
+            height: 8px;
+            background: #fff;
+            border-radius: 50%;
+            animation: blink 1.5s infinite;
+        }
+
+        .timer {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 14px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #fff;
+            background: rgba(0, 0, 0, .6);
+            backdrop-filter: blur(10px);
+            border-radius: 12px;
+        }
+
+        .card-info {
+            padding: 24px;
+            background: rgba(30, 41, 59, .95);
+            backdrop-filter: blur(10px);
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .card-title h3 {
+            font-size: 20px;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .creator {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 13px;
+            color: #9ca3af;
+        }
+
+        .avatar {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #a855f7, #ec4899);
+        }
+
+        .heart {
+            font-size: 28px;
+            color: #ef4444;
+            transition: transform .3s ease;
+            cursor: pointer;
+        }
+
+        .auction-card:hover .heart {
+            transform: scale(1.3);
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .price-info p:first-child {
+            font-size: 12px;
+            color: #9ca3af;
+            margin-bottom: 4px;
+        }
+
+        .price-info p:last-child {
+            font-size: 18px;
+            font-weight: 700;
+        }
+
+        .likes {
+            font-size: 13px;
+            color: #9ca3af;
+        }
+
+        .pagination {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin: 50px 0 80px;
+        }
+
+        .dot {
+            height: 10px;
+            width: 10px;
+            background: #4b5563;
+            border-radius: 10px;
+            transition: all .3s;
+            cursor: pointer;
+        }
+
+        .dot:hover {
+            background: #6b7280;
+        }
+
+        .dot.active {
+            width: 40px;
+            background: #a855f7;
+        }
+
+        /* ================= SELLERS ================= */
+        .sellers-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        .nav-buttons-sellers {
+            display: flex;
+            gap: 12px;
+        }
+
+        .nav-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(30, 41, 59, 0.8);
+            color: #fff;
+            font-size: 24px;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-btn:hover {
+            background: #7c3aed;
+            transform: scale(1.1);
+        }
+
+        .sellers-container {
+            display: flex;
+            gap: 30px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            padding-bottom: 30px;
+        }
+
+        .sellers-container::-webkit-scrollbar {
+            display: none;
+        }
+
+        .seller-card {
+            flex-shrink: 0;
+            text-align: center;
+            cursor: pointer;
+            transition: transform .3s;
+        }
+
+        .seller-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .seller-avatar {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            border-radius: 25px;
+            font-size: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,.4);
+            transition: all .3s;
+        }
+
+        .seller-card:hover .seller-avatar {
+            box-shadow: 0 20px 50px rgba(168,85,247,.6);
+            transform: scale(1.05);
+        }
+
+        .status-dot {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            width: 28px;
+            height: 28px;
+            background: #10b981;
+            border-radius: 50%;
+            border: 4px solid #1a1a2e;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .seller-card:hover .status-dot {
+            opacity: 1;
+            animation: bounce .6s;
+        }
+
+        .seller-name {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 6px;
+        }
+
+        .seller-amount {
+            font-size: 13px;
+            color: #9ca3af;
+        }
+
+        /* ================= COLORS ================= */
+        .bg-yellow { background: #fbbf24; }
+        .bg-orange { background: #ea580c; }
+        .bg-pink { background: #f472b6; }
+        .bg-purple { background: #a855f7; }
+        .bg-lime { background: #a3e635; }
+        .bg-brown { background: #c2410c; }
+        .bg-pink-deep { background: #ec4899; }
+        .bg-orange-deep { background: #f97316; }
+        .bg-gradient { background: linear-gradient(135deg, #f472b6, #a855f7); }
+
+        /* ================= ANIMATIONS ================= */
+        @keyframes pulse {
+            0%,100% { opacity: 1; }
+            50% { opacity: .8; }
+        }
+
+        @keyframes blink {
+            0%,100% { opacity: 1; }
+            50% { opacity: .3; }
+        }
+
+        @keyframes bounce {
+            0%,100% { transform: translateY(0); }
+            50% { transform: translateY(-12px); }
+        }
+
+        /* ================= RESPONSIVE ================= */
+        @media (max-width: 768px) {
+            .header {
+                padding: 15px 20px;
+            }
+            
+            .nav-menu {
+                display: none;
+            }
+
+            .container {
+                padding: 40px 20px;
+            }
+
+            .auctions-grid {
+                grid-template-columns: 1fr;
+            }
+        }   
